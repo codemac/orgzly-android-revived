@@ -18,6 +18,7 @@
     <string name="remove_notebook_link">Remove link</string>
     <string name="browse">Browse</string>
     <string name="dropbox">Dropbox</string>
+    <string name="google_drive">Google Drive</string>
     <string name="delete">Delete</string>
     <string name="delete_with_quoted_argument">Delete “%s”</string>
     <string name="delete_amount_of_books">Delete %d notebooks</string>
@@ -203,6 +204,14 @@
     <string name="webdav_auth_password_hint">Password</string>
     <string name="webdav_test_error_auth">Login or password is invalid</string>
     <string name="webdav_test_error_unknown">Unknown error occurred</string>
+
+    <string name="google_drive_repo_setup_hint">Use your own Google Cloud OAuth credentials. Set the Drive directory path (for example, /org) and provide a fresh OAuth authorization code when creating or reauthorizing this repository.</string>
+    <string name="google_drive_directory_path_hint">Google Drive directory path (e.g. /org)</string>
+    <string name="google_drive_client_id_hint">OAuth client ID</string>
+    <string name="google_drive_client_secret_hint">OAuth client secret</string>
+    <string name="google_drive_redirect_uri_hint">OAuth redirect URI</string>
+    <string name="google_drive_authorization_code_hint">OAuth authorization code</string>
+    <string name="google_drive_authorization_code_required">Authorization code is required to obtain a refresh token.</string>
 
     <!-- Share button - error messages (set as title). -->
     <string name="share_action_not_supported">Share action %s is not supported</string>

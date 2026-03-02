@@ -36,6 +36,9 @@ class RepoFactory @Inject constructor(
             type == RepoType.GIT.id && AppPreferences.gitIsEnabled(context) ->
                 GitRepo.getInstance(repoWithProps, context)
 
+            type == RepoType.GOOGLE_DRIVE.id ->
+                GoogleDriveRepo.getInstance(repoWithProps)
+
             else ->
                 throw IllegalArgumentException("Unknown type or disabled repo $repoWithProps")
         }
