@@ -8,7 +8,8 @@ enum class RepoType(val id: Int) {
     DIRECTORY(3),
     DOCUMENT(4),
     WEBDAV(5),
-    GIT(6);
+    GIT(6),
+    GOOGLE_DRIVE(7);
 
     companion object {
         @JvmStatic
@@ -20,6 +21,7 @@ enum class RepoType(val id: Int) {
                 4 -> DOCUMENT
                 5 -> WEBDAV
                 6 -> GIT
+                7 -> GOOGLE_DRIVE
 
                 else -> throw IllegalArgumentException("Unknown repo type id $type")
             }

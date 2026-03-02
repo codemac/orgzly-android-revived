@@ -32,6 +32,10 @@
                 app:showAsAction="ifRoom"
                 android:title="@string/webdav"/>
             <item
+                android:id="@+id/repos_options_menu_item_new_google_drive"
+                app:showAsAction="ifRoom"
+                android:title="@string/google_drive"/>
+            <item
                 android:id="@+id/repos_options_menu_item_new_directory"
                 app:showAsAction="ifRoom"
                 android:title="@string/directory"/>

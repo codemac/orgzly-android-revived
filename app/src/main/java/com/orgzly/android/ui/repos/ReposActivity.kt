@@ -28,6 +28,7 @@ import com.orgzly.android.ui.CommonActivity
 import com.orgzly.android.ui.repo.directory.DirectoryRepoActivity
 import com.orgzly.android.ui.repo.dropbox.DropboxRepoActivity
 import com.orgzly.android.ui.repo.git.GitRepoActivity
+import com.orgzly.android.ui.repo.googledrive.GoogleDriveRepoActivity
 import com.orgzly.android.ui.repo.webdav.WebdavRepoActivity
 import com.orgzly.android.ui.showSnackbar
 import com.orgzly.databinding.ActivityReposBinding
@@ -136,6 +137,10 @@ class ReposActivity : CommonActivity(), AdapterView.OnItemClickListener, Activit
                         startRepoActivity(menuItem.itemId)
                     }
 
+                    R.id.repos_options_menu_item_new_google_drive -> {
+                        startRepoActivity(menuItem.itemId)
+                    }
+
                     R.id.repos_options_menu_item_new_directory -> {
                         startRepoActivity(menuItem.itemId)
                     }
@@ -174,6 +179,10 @@ class ReposActivity : CommonActivity(), AdapterView.OnItemClickListener, Activit
 
         binding.activityReposWebdav.setOnClickListener {
             startRepoActivity(R.id.repos_options_menu_item_new_webdav)
+        }
+
+        binding.activityReposGoogleDrive.setOnClickListener {
+            startRepoActivity(R.id.repos_options_menu_item_new_google_drive)
         }
 
         binding.activityReposDirectory.setOnClickListener {
@@ -246,6 +255,11 @@ class ReposActivity : CommonActivity(), AdapterView.OnItemClickListener, Activit
                 return
             }
 
+            R.id.repos_options_menu_item_new_google_drive -> {
+                GoogleDriveRepoActivity.start(this)
+                return
+            }
+
             R.id.repos_options_menu_item_new_directory -> {
                 DirectoryRepoActivity.start(this)
                 return
@@ -283,6 +297,9 @@ class ReposActivity : CommonActivity(), AdapterView.OnItemClickListener, Activit
 
             RepoType.GIT ->
                 GitRepoActivity.start(this, repoEntity.id)
+
+            RepoType.GOOGLE_DRIVE ->
+                GoogleDriveRepoActivity.start(this, repoEntity.id)
         }
     }
 

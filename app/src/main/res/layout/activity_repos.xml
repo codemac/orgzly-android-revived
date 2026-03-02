@@ -57,6 +57,12 @@
                     android:text="@string/webdav" />
 
                 <Button
+                    android:id="@+id/activity_repos_google_drive"
+                    style="@style/Button.ReposRepo"
+                    app:icon="@drawable/ic_cloud_outline"
+                    android:text="@string/google_drive" />
+
+                <Button
                     android:id="@+id/activity_repos_directory"
                     style="@style/Button.ReposRepo"
                     app:icon="@drawable/ic_folder_open"
